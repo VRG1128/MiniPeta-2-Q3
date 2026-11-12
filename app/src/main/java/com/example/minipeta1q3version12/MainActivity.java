@@ -1,13 +1,15 @@
 package com.example.minipeta1q3version12;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +20,14 @@ public class MainActivity extends Activity {
         EditText username = findViewById(R.id.username);
         EditText password = findViewById(R.id.password);
         Button loginButton = findViewById(R.id.loginButton);
-        TextView resultText = findViewById(R.id.resultText);
+        TextView tvRegister = findViewById(R.id.tvRegister);
+
+        if (tvRegister != null) {
+            tvRegister.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            });
+        }
 
         // Login button function
         loginButton.setOnClickListener(v -> {
@@ -32,17 +41,17 @@ public class MainActivity extends Activity {
                         R.string.please_enter_credentials,
                         Toast.LENGTH_SHORT).show();
 
-            } else if ("admin".equals(user) && "1234".equals(pass)) {
-
-                resultText.setText(R.string.login_successful);
+            } else if ("GayLord123".equals(user) && "6767".equals(pass)) {
 
                 Toast.makeText(this,
                         getString(R.string.welcome_user, user),
                         Toast.LENGTH_SHORT).show();
 
-            } else {
+                Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
+                startActivity(intent);
+                finish();
 
-                resultText.setText(R.string.invalid_credentials);
+            } else {
 
                 Toast.makeText(this,
                         R.string.login_failed,

@@ -11,11 +11,13 @@
         android:layout_height="0dp"
         android:contentDescription="@null"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/yellow_simple_iu_ux_design_app__7_"
-        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/yellow_simple_iu_ux_design_app__7_"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvLogIn"
@@ -69,12 +71,12 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/resultText"
+        android:id="@+id/tvRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textSize="16sp"
-        tools:text="Result Text"
+        android:layout_marginTop="24dp"
+        android:text="Don't have an account? Register"
+        android:textColor="#000000"
         app:layout_constraintTop_toBottomOf="@id/loginButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
