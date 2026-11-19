@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "421926068446",
+    "firebase_url": "https://minipeta1q3version-1-2-128d6-default-rtdb.firebaseio.com",
+    "project_id": "minipeta1q3version-1-2-128d6",
+    "storage_bucket": "minipeta1q3version-1-2-128d6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421926068446:android:5fe8683ef3a38693f3e24f",
+        "android_client_info": {
+          "package_name": "com.example.minipeta1q3version12"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtf0EGA7EvjxTqW09iaK36risQ85WSxbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

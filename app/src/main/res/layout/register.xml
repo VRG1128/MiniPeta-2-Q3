@@ -8,6 +8,8 @@
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:clickable="false"
+        android:focusable="false"
         android:contentDescription="@null"
         android:scaleType="fitXY"
         android:src="@drawable/yellow_simple_iu_ux_design_app__7_"
