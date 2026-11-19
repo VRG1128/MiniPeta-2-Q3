@@ -71,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
                     if (snapshot != null && snapshot.exists()) {
                         String dbPassword = snapshot.child("password").getValue(String.class);
                         if (dbPassword != null && dbPassword.equals(pass)) {
+                            SessionManager sessionManager = new SessionManager(MainActivity.this);
+                            sessionManager.createSession(user);
+
                             Toast.makeText(MainActivity.this,
                                     getString(R.string.welcome_user, user),
                                     Toast.LENGTH_SHORT).show();

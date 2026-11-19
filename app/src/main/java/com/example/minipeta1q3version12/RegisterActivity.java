@@ -62,6 +62,9 @@ public class RegisterActivity extends AppCompatActivity {
                             User newUser = new User(user, pass);
                             reference.child(user).setValue(newUser).addOnCompleteListener(saveTask -> {
                                 if (saveTask.isSuccessful()) {
+                                    SessionManager sessionManager = new SessionManager(RegisterActivity.this);
+                                    sessionManager.createSession(user);
+
                                     Toast.makeText(RegisterActivity.this, "Registration Successful!", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(RegisterActivity.this, DashboardActivity.class);
                                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
